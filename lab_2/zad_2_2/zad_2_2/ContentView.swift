@@ -10,31 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Image("dog")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            VStack() {
-                Spacer()
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Piesek")
-                            .font(.title)
-                            .fontWeight(.heavy)
-                            .foregroundColor(.blue)
-                        Text("Nieznany autor")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.blue)
-                    }
-                    .padding()
-                    Spacer()
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Piesek")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.blue)
+                    Text("Nieznany autor")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.blue)
                 }
-                .background(Color.white).opacity(0.5)
+                .padding()
+                Spacer()
             }
+            .background(Color.white).opacity(0.5)
         }
-        .frame(maxHeight: 410)
-        
     }
 }
 

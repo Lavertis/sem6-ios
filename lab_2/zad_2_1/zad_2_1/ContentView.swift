@@ -11,10 +11,7 @@ import SwiftUI
 struct ContentView: View {
     let colours: [Color] = [.red, .orange, .yellow, .green, .blue, .purple]
     var body: some View {
-        ZStack {
-            Text("Hello, World!")
-            Text("Hello, Wssrld!")
-            
+        ZStack {           
             ForEach(0..<colours.count, id: \.self) { idx in
                 Rectangle()
                     .fill(self.colours[idx])
