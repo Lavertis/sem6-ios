@@ -9,6 +9,7 @@
 import SwiftUI
 
 
+
 struct ContentView: View {
     private let shapes: [String] = ["Kwadrat", "Koło", "Trójkąt"]
     private let colours: [String:Color] = ["Czerwony": Color.red, "Zielony": Color.green, "Niebieski": Color.blue, "Fioletowy": Color.purple]
