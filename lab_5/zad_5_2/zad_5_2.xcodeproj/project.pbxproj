@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8E91AFD27ED31210044636E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91AFC27ED31210044636E /* AppDelegate.swift */; };
+		F8E91AFF27ED31210044636E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91AFE27ED31210044636E /* SceneDelegate.swift */; };
+		F8E91B0127ED31210044636E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91B0027ED31210044636E /* ContentView.swift */; };
+		F8E91B0327ED31220044636E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E91B0227ED31220044636E /* Assets.xcassets */; };
+		F8E91B0627ED31220044636E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E91B0527ED31220044636E /* Preview Assets.xcassets */; };
+		F8E91B0927ED31220044636E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8E91B0727ED31220044636E /* LaunchScreen.storyboard */; };
+		F8E91B1227ED32690044636E /* HondaBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91B1127ED32690044636E /* HondaBrandView.swift */; };
+		F8E91B1427ED32730044636E /* ToyotaBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91B1327ED32730044636E /* ToyotaBrandView.swift */; };
+		F8E91B1627ED328A0044636E /* NissanBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91B1527ED328A0044636E /* NissanBrandView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8E91AF927ED31210044636E /* zad_5_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zad_5_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E91AFC27ED31210044636E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8E91AFE27ED31210044636E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F8E91B0027ED31210044636E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8E91B0227ED31220044636E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8E91B0527ED31220044636E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8E91B0827ED31220044636E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8E91B0A27ED31220044636E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E91B1127ED32690044636E /* HondaBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HondaBrandView.swift; sourceTree = "<group>"; };
+		F8E91B1327ED32730044636E /* ToyotaBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyotaBrandView.swift; sourceTree = "<group>"; };
+		F8E91B1527ED328A0044636E /* NissanBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NissanBrandView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8E91AF627ED31210044636E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8E91AF027ED31210044636E = {
+			isa = PBXGroup;
+			children = (
+				F8E91AFB27ED31210044636E /* zad_5_2 */,
+				F8E91AFA27ED31210044636E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8E91AFA27ED31210044636E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91AF927ED31210044636E /* zad_5_2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8E91AFB27ED31210044636E /* zad_5_2 */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91B1027ED32500044636E /* BrandViews */,
+				F8E91AFC27ED31210044636E /* AppDelegate.swift */,
+				F8E91AFE27ED31210044636E /* SceneDelegate.swift */,
+				F8E91B0027ED31210044636E /* ContentView.swift */,
+				F8E91B0227ED31220044636E /* Assets.xcassets */,
+				F8E91B0727ED31220044636E /* LaunchScreen.storyboard */,
+				F8E91B0A27ED31220044636E /* Info.plist */,
+				F8E91B0427ED31220044636E /* Preview Content */,
+			);
+			path = zad_5_2;
+			sourceTree = "<group>";
+		};
+		F8E91B0427ED31220044636E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91B0527ED31220044636E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8E91B1027ED32500044636E /* BrandViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91B1127ED32690044636E /* HondaBrandView.swift */,
+				F8E91B1327ED32730044636E /* ToyotaBrandView.swift */,
+				F8E91B1527ED328A0044636E /* NissanBrandView.swift */,
+			);
+			path = BrandViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8E91AF827ED31210044636E /* zad_5_2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8E91B0D27ED31220044636E /* Build configuration list for PBXNativeTarget "zad_5_2" */;
+			buildPhases = (
+				F8E91AF527ED31210044636E /* Sources */,
+				F8E91AF627ED31210044636E /* Frameworks */,
+				F8E91AF727ED31210044636E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zad_5_2;
+			productName = zad_5_2;
+			productReference = F8E91AF927ED31210044636E /* zad_5_2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8E91AF127ED31210044636E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Rafał Kuźmiczuk";
+				TargetAttributes = {
+					F8E91AF827ED31210044636E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F8E91AF427ED31210044636E /* Build configuration list for PBXProject "zad_5_2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8E91AF027ED31210044636E;
+			productRefGroup = F8E91AFA27ED31210044636E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8E91AF827ED31210044636E /* zad_5_2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8E91AF727ED31210044636E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E91B0927ED31220044636E /* LaunchScreen.storyboard in Resources */,
+				F8E91B0627ED31220044636E /* Preview Assets.xcassets in Resources */,
+				F8E91B0327ED31220044636E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8E91AF527ED31210044636E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E91AFD27ED31210044636E /* AppDelegate.swift in Sources */,
+				F8E91B1227ED32690044636E /* HondaBrandView.swift in Sources */,
+				F8E91AFF27ED31210044636E /* SceneDelegate.swift in Sources */,
+				F8E91B1427ED32730044636E /* ToyotaBrandView.swift in Sources */,
+				F8E91B1627ED328A0044636E /* NissanBrandView.swift in Sources */,
+				F8E91B0127ED31210044636E /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8E91B0727ED31220044636E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8E91B0827ED31220044636E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8E91B0B27ED31220044636E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8E91B0C27ED31220044636E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8E91B0E27ED31220044636E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"zad_5_2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = zad_5_2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PL.zad-5-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8E91B0F27ED31220044636E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"zad_5_2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = zad_5_2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PL.zad-5-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8E91AF427ED31210044636E /* Build configuration list for PBXProject "zad_5_2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E91B0B27ED31220044636E /* Debug */,
+				F8E91B0C27ED31220044636E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8E91B0D27ED31220044636E /* Build configuration list for PBXNativeTarget "zad_5_2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E91B0E27ED31220044636E /* Debug */,
+				F8E91B0F27ED31220044636E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8E91AF127ED31210044636E /* Project object */;
+}
