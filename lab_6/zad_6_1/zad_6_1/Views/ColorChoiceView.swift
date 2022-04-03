@@ -9,19 +9,27 @@
 import SwiftUI
 
 struct ColorChoiceView: View {
+    @Environment(\.presentationMode) var presentationMode
     @Binding var chosenColor: Color
     let colors: [Color] = [.orange, .red, .green, .blue]
     
     var body: some View {
         VStack {
-            Picker("Kolory", selection: $chosenColor) {
-                ForEach(colors, id: \.self) { color in
+            ForEach(colors, id: \.self) { color in
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    self.chosenColor = color
+                }, label: {
                     Text(color.description.capitalized)
-                    .foregroundColor(color)
                     .padding()
-                }
-            }.labelsHidden()
-        }.navigationBarTitle(Text("Wybór koloru"))
+                    .frame(width: 100)
+                    .foregroundColor(.white)
+                    .background(color)
+                    .cornerRadius(30)
+                }).padding(.bottom)
+                
+            }.navigationBarTitle(Text("Wybór koloru"))
+        }
     }
 }
 

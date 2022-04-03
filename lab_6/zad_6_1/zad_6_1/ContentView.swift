@@ -10,26 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var chosenColor: Color = Color.orange
+    @State private var showColorChoice: Bool = false
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 25) {
-                Text("Hello, World!")
-                    .fontWeight(.bold)
-                    .padding()
-                    .foregroundColor(chosenColor)
-                
-                NavigationLink(
-                    destination: ColorChoiceView(chosenColor: $chosenColor),
-                    label: {
-                        Text("Przejdź do wyboru koloru")
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(30)
-                })
-            }.navigationBarTitle(Text("Pierwszy widok"))
+        VStack(spacing: 25) {
+        Text("Hello, World!")
+        .fontWeight(.bold)
+        .padding()
+        .foregroundColor(chosenColor)
+        
+        Button(action: {
+            self.showColorChoice.toggle()
+        }, label: {
+            Text("Przejdź do wyboru koloru")
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(5)
+        })
+        .sheet(isPresented: $showColorChoice) {
+            ColorChoiceView(chosenColor: self.$chosenColor)
         }
+    }
     }
 }
 
