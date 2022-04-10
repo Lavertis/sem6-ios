@@ -21,29 +21,35 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        List {
-            Section(header: Text("Houses"), content: {
-                ForEach(houses, id: \.self.name) { house in
-                    HStack {
-                        Text(house.name).padding()
-                        Spacer()
-                        Image(house.photoPath)
-                        .resizable()
-                        .frame(width: 150, height: 100)
+        NavigationView {
+            List {
+                Section(header: Text("Houses"), content: {
+                    ForEach(houses, id: \.self.name) { house in
+                        NavigationLink(destination: HouseView(house: house), label: {
+                            HStack {
+                                Text(house.name).padding()
+                                Spacer()
+                                Image(house.photoPath)
+                                .resizable()
+                                .frame(width: 150, height: 100)
+                            }
+                        })
                     }
-                }
-            })
-            Section(header: Text("Flats"), content: {
-                ForEach(flats, id: \.self.name) { flat in
-                    HStack {
-                        Text(flat.name).padding()
-                        Spacer()
-                        Image(flat.photoPath)
-                        .resizable()
-                        .frame(width: 150, height: 100)
+                })
+                Section(header: Text("Flats"), content: {
+                    ForEach(flats, id: \.self.name) { flat in
+                        NavigationLink(destination: FlatView(flat: flat), label: {
+                            HStack {
+                                Text(flat.name).padding()
+                                Spacer()
+                                Image(flat.photoPath)
+                                .resizable()
+                                .frame(width: 150, height: 100)
+                            }
+                        })
                     }
-                }
-            })
+                })
+            }.navigationBarTitle("Houses & Flats")
         }
     }
 }

@@ -15,6 +15,8 @@
 		F802B11627FB91170072A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F802B11427FB91170072A16E /* LaunchScreen.storyboard */; };
 		F802B11F27FB91B70072A16E /* Flat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802B11E27FB91B70072A16E /* Flat.swift */; };
 		F802B12127FB91C40072A16E /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802B12027FB91C40072A16E /* House.swift */; };
+		F8A8301528038E250054C20E /* FlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8301428038E250054C20E /* FlatView.swift */; };
+		F8A8301728038E2E0054C20E /* HouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8301628038E2E0054C20E /* HouseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F802B11727FB91170072A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F802B11E27FB91B70072A16E /* Flat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flat.swift; sourceTree = "<group>"; };
 		F802B12027FB91C40072A16E /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		F8A8301428038E250054C20E /* FlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatView.swift; sourceTree = "<group>"; };
+		F8A8301628038E2E0054C20E /* HouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		F802B10827FB91160072A16E /* zad_7_2 */ = {
 			isa = PBXGroup;
 			children = (
+				F8A8301328038DE80054C20E /* Views */,
 				F802B11D27FB919F0072A16E /* Entities */,
 				F802B10927FB91160072A16E /* AppDelegate.swift */,
 				F802B10B27FB91160072A16E /* SceneDelegate.swift */,
@@ -87,6 +92,15 @@
 				F802B12027FB91C40072A16E /* House.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		F8A8301328038DE80054C20E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8301428038E250054C20E /* FlatView.swift */,
+				F8A8301628038E2E0054C20E /* HouseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +178,9 @@
 				F802B10A27FB91160072A16E /* AppDelegate.swift in Sources */,
 				F802B10C27FB91160072A16E /* SceneDelegate.swift in Sources */,
 				F802B12127FB91C40072A16E /* House.swift in Sources */,
+				F8A8301728038E2E0054C20E /* HouseView.swift in Sources */,
 				F802B10E27FB91160072A16E /* ContentView.swift in Sources */,
+				F8A8301528038E250054C20E /* FlatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
