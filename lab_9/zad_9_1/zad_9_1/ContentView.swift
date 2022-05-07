@@ -18,7 +18,7 @@ class MyImage {
     }
 }
 
-var images: [MyImage] = [
+let images: [MyImage] = [
     MyImage(title: "Autumn forest", path: "autumn_forest"),
     MyImage(title: "Riverbed", path: "river"),
     MyImage(title: "Plane hidden in forest", path: "plane_in_forest"),
