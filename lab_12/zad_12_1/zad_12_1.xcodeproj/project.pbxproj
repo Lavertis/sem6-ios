@@ -14,10 +14,10 @@
 		F86C5ED328286838000336A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C5ED228286838000336A7 /* Assets.xcassets */; };
 		F86C5ED628286838000336A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C5ED528286838000336A7 /* Preview Assets.xcassets */; };
 		F86C5ED928286838000336A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86C5ED728286838000336A7 /* LaunchScreen.storyboard */; };
-		F86C5EF6282871D7000336A7 /* Dog+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C5EF2282871D7000336A7 /* Dog+CoreDataClass.swift */; };
-		F86C5EF7282871D7000336A7 /* Dog+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C5EF3282871D7000336A7 /* Dog+CoreDataProperties.swift */; };
-		F86C5EF8282871D7000336A7 /* Breed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C5EF4282871D7000336A7 /* Breed+CoreDataClass.swift */; };
-		F86C5EF9282871D7000336A7 /* Breed+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C5EF5282871D7000336A7 /* Breed+CoreDataProperties.swift */; };
+		F8F93BEF2829B1380069673F /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F93BEB2829B1380069673F /* Book+CoreDataClass.swift */; };
+		F8F93BF02829B1380069673F /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F93BEC2829B1380069673F /* Book+CoreDataProperties.swift */; };
+		F8F93BF12829B1380069673F /* BookGenre+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F93BED2829B1380069673F /* BookGenre+CoreDataClass.swift */; };
+		F8F93BF22829B1380069673F /* BookGenre+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F93BEE2829B1380069673F /* BookGenre+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		F86C5ED528286838000336A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F86C5ED828286838000336A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86C5EDA28286838000336A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F86C5EF2282871D7000336A7 /* Dog+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F86C5EF3282871D7000336A7 /* Dog+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dog+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F86C5EF4282871D7000336A7 /* Breed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F86C5EF5282871D7000336A7 /* Breed+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F8F93BEB2829B1380069673F /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8F93BEC2829B1380069673F /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F8F93BED2829B1380069673F /* BookGenre+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookGenre+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8F93BEE2829B1380069673F /* BookGenre+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookGenre+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +90,10 @@
 		F86C5EE928286F6F000336A7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				F86C5EF2282871D7000336A7 /* Dog+CoreDataClass.swift */,
-				F86C5EF3282871D7000336A7 /* Dog+CoreDataProperties.swift */,
-				F86C5EF4282871D7000336A7 /* Breed+CoreDataClass.swift */,
-				F86C5EF5282871D7000336A7 /* Breed+CoreDataProperties.swift */,
+				F8F93BEB2829B1380069673F /* Book+CoreDataClass.swift */,
+				F8F93BEC2829B1380069673F /* Book+CoreDataProperties.swift */,
+				F8F93BED2829B1380069673F /* BookGenre+CoreDataClass.swift */,
+				F8F93BEE2829B1380069673F /* BookGenre+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -169,13 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86C5EF7282871D7000336A7 /* Dog+CoreDataProperties.swift in Sources */,
+				F8F93BEF2829B1380069673F /* Book+CoreDataClass.swift in Sources */,
 				F86C5ECA28286837000336A7 /* AppDelegate.swift in Sources */,
-				F86C5EF6282871D7000336A7 /* Dog+CoreDataClass.swift in Sources */,
 				F86C5ECF28286837000336A7 /* zad_12_1.xcdatamodeld in Sources */,
 				F86C5ED128286837000336A7 /* ContentView.swift in Sources */,
-				F86C5EF8282871D7000336A7 /* Breed+CoreDataClass.swift in Sources */,
-				F86C5EF9282871D7000336A7 /* Breed+CoreDataProperties.swift in Sources */,
+				F8F93BF22829B1380069673F /* BookGenre+CoreDataProperties.swift in Sources */,
+				F8F93BF12829B1380069673F /* BookGenre+CoreDataClass.swift in Sources */,
+				F8F93BF02829B1380069673F /* Book+CoreDataProperties.swift in Sources */,
 				F86C5ECC28286837000336A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

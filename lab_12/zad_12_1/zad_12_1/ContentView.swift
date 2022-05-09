@@ -9,78 +9,114 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) private var dbContext
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Dog.name, ascending: true)], animation: .default)
-    private var dogs: FetchedResults<Dog>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Book.title, ascending: true)], animation: .default)
+    private var books: FetchedResults<Book>
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Breed.name, ascending: true)], animation: .default)
-    private var breeds: FetchedResults<Breed>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \BookGenre.name, ascending: true)], animation: .default)
+    private var bookGenres: FetchedResults<BookGenre>
     
-    @State private var name: String = ""
-    @State private var birthYear: String = ""
-    @State private var selectedBreed: Breed?
+    @State private var title: String = ""
+    @State private var author: String = ""
+    @State private var publishYear: String = ""
+    @State private var publisher: String = ""
+    @State private var stars: Int16 = 5
+    @State private var bookGenre: BookGenre?
+    
+    @State private var pickerId: Int = 0
     
     var body: some View {
         VStack {
-            Text("Dogs")
+            Text("Books").padding(.top)
             Group {
                 HStack {
-                    Text("Dog name")
-                    TextField("name", text: $name)
-                }.padding(.top)
+                    Text("Title")
+                    TextField("title", text: $title)
+                }
                 HStack {
-                    Text("Dog birth year")
-                    TextField("year", text: $birthYear)
+                    Text("Author")
+                    TextField("author", text: $author)
                 }
-                Picker(selection: $selectedBreed, label: Text("Choose breed")) {
-                    ForEach(breeds, id: \.self) { (breed: Breed) in
-                        Text(breed.name!).tag(breed as Breed?)
+                HStack {
+                    Text("Publisher")
+                    TextField("publisher", text: $publisher)
+                }
+                HStack {
+                    Text("Publish year")
+                    TextField("year", text: $publishYear)
+                }
+                HStack {
+                    Text("Stars")
+                    Picker(selection: $stars, label: Text("Stars")) {
+                        ForEach(1...5, id: \.self) { (number: Int16) in
+                            Text(String(number)).tag(number)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                Picker(selection: $bookGenre, label: Text("Genre")) {
+                    ForEach(bookGenres, id: \.self) { (bookGenre: BookGenre) in
+                        Text(bookGenre.name!).tag(bookGenre as BookGenre?)
                     }
-                }.pickerStyle(SegmentedPickerStyle())
-                
-                Button(action: addDog) {
-                    Text("Add new dog")
+                }
+                .id(pickerId)
+                .onAppear {
+                    self.bookGenre = self.bookGenres.first
+                }
+                Button(action: addBook) {
+                    Text("Add book")
                 }
                 
-                if (breeds.count == 0) {
-                    Button(action: addBreeds) {
-                        Text("Add breeds")
-                    }
+                if (bookGenres.count == 0) {
+                    Button(action: {
+                        self.addBookGenres()
+                        self.pickerId = self.pickerId + 1
+                    }) {
+                        Text("Add genres")
+                    }.padding(.top)
                 }
-            }.padding(.horizontal).padding(.bottom)
+            }.padding(.horizontal)
             
             List {
-                ForEach(breeds, id: \.self) { breed in
-                    Section(header: Text(breed.name!)) {
-                        ForEach(breed.dogArray, id: \.self) { dog in
-                            Text("\(dog.name!) - born in \(dog.birthYear)")
-                        }.onDelete(perform: self.deleteDog)
+                ForEach(bookGenres, id: \.self) { bookGenre in
+                    Section(header: Text(bookGenre.name!)) {
+                        ForEach(bookGenre.books, id: \.self) { book in
+                            VStack(alignment: .leading) {
+                                Text("Title: \(book.title!)")
+                                Text("Author: \(book.author!)")
+                                Text("Publish year: \(String(book.publishYear))")
+                                Text("Publisher: \(book.publisher!)")
+                                Text("Stars: \(book.stars)")
+                            }
+                        }.onDelete(perform: self.deleteBook)
                     }
                 }
             }
         }
     }
     
-    private func addDog() {
-        let dog = Dog(context: viewContext)
-        dog.name = name
-        dog.birthYear = Int16(birthYear)!
-        dog.breed = selectedBreed
+    private func addBook() {
+        let book = Book(context: dbContext)
+        book.title = title
+        book.author = author
+        book.publishYear = Int16(publishYear) ?? 0
+        book.publisher = publisher
+        book.stars = stars
+        book.genre = bookGenre
         
         do {
-            try viewContext.save()
+            try dbContext.save()
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     
-    private func deleteDog(offsets: IndexSet) {
+    private func deleteBook(offsets: IndexSet) {
         withAnimation {
-            offsets.map { dogs[$0] }.forEach(viewContext.delete)
+            offsets.map { books[$0] }.forEach(dbContext.delete)
             do {
-                try viewContext.save()
+                try dbContext.save()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
@@ -88,20 +124,21 @@ struct ContentView: View {
         }
     }
     
-    private func addBreeds() {
-        var breed = Breed(context: viewContext)
-        breed.name = "German Shepherd"
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
+    private func addBookGenres() {
+        let bookGenre1 = BookGenre(context: dbContext)
+        bookGenre1.name = "Comedy"
         
-        breed = Breed(context: viewContext)
-        breed.name = "Husky"
+        let bookGenre2 = BookGenre(context: dbContext)
+        bookGenre2.name = "Crime fiction"
+        
+        let bookGenre3 = BookGenre(context: dbContext)
+        bookGenre3.name = "Drama"
+        
+        let bookGenre4 = BookGenre(context: dbContext)
+        bookGenre4.name = "Sensation"
+        
         do {
-            try viewContext.save()
+            try dbContext.save()
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
