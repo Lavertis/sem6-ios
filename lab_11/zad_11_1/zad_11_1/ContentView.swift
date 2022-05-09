@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Cars.brand, ascending: true)], animation: .default)
-    private var cars: FetchedResults<Cars>
+    @Environment(\.managedObjectContext) private var dbContext
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Car.brand, ascending: true)], animation: .default)
+    private var cars: FetchedResults<Car>
     
     @State private var brand: String = ""
     @State private var model: String = ""
@@ -67,15 +67,15 @@ struct ContentView: View {
     }
     
     private func addCar() {
-        let car = Cars(context: viewContext)
+        let car = Car(context: dbContext)
         car.brand = brand
         car.model = model
-        car.productionYear = Int16(productionYear)!
-        car.mileage = Int32(mileage)!
-        car.price = Double(price)!
+        car.productionYear = Int16(productionYear) ?? 0
+        car.mileage = Int32(mileage) ?? 0
+        car.price = Double(price) ?? 0
         
         do {
-            try viewContext.save()
+            try dbContext.save()
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
@@ -84,9 +84,9 @@ struct ContentView: View {
     
     private func deleteCar(offsets: IndexSet) {
         withAnimation {
-            offsets.map{ cars[$0] }.forEach(viewContext.delete)
+            offsets.map{ cars[$0] }.forEach(dbContext.delete)
             do {
-                try viewContext.save()
+                try dbContext.save()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
