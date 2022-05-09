@@ -16,21 +16,15 @@ struct ContentView: View {
             List {
                 ForEach(events.indices, id: \.self) { idx in
                     NavigationLink(
-                        destination: EditEventView(events: self.$events, index: idx)) {
+                    destination: EditEventView(event: self.$events[idx])) {
                         VStack(alignment: .leading) {
                             Text("Name: \(self.events[idx].name)")
                             Text("Duration: \(Int(self.events[idx].duration)) minutes")
                         }
-                        .gesture(DragGesture()
-                            .onEnded { value in
-                                if value.translation.width != 0 {
-                                    // left or right
-                                    self.events.remove(at: idx)
-                                }
-                            }
-                        )
                     }.padding()
-                }
+                }.onDelete(perform: { IndexSet in
+                    self.events.remove(atOffsets: IndexSet)
+                })
             }.navigationBarTitle("Events")
         }
     }

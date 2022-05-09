@@ -22,7 +22,7 @@ struct ContentView: View {
         return Text("Hello, World!")
             .font(.largeTitle)
             .fontWeight(.bold)
-            .foregroundColor(colors[index % 8])
+            .foregroundColor(colors[index % colors.count])
             .gesture(longPress)
     }
 }
