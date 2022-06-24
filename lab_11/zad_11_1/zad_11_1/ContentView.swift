@@ -50,7 +50,7 @@ struct ContentView: View {
             }
             
             List {
-                ForEach(cars, id: \.brand) { car in
+                ForEach(cars) { car in
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Brand: \(car.brand!)")
@@ -59,6 +59,14 @@ struct ContentView: View {
                             Text("Mileage: \(car.mileage)")
                             Text("Price: $\(String(format: "%.2lf", car.price))")
                         }
+                        Spacer()
+                        Button(action: {
+                            self.deleteCar(car: car)
+                        }) {
+                            Image(systemName: "trash")
+                        }
+                        .foregroundColor(.red)
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
                 .onDelete(perform: deleteCar)
@@ -91,6 +99,17 @@ struct ContentView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+    
+    private func deleteCar(car: Car) {
+        dbContext.delete(car)
+        do {
+            try dbContext.save()
+        } catch {
+            
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }

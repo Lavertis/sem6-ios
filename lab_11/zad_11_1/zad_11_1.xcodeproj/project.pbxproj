@@ -14,6 +14,8 @@
 		F86C5EB028285848000336A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C5EAF28285848000336A7 /* Assets.xcassets */; };
 		F86C5EB328285848000336A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C5EB228285848000336A7 /* Preview Assets.xcassets */; };
 		F86C5EB628285848000336A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86C5EB428285848000336A7 /* LaunchScreen.storyboard */; };
+		F8E3DB4828664D0C00809F2F /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3DB4628664D0C00809F2F /* Car+CoreDataClass.swift */; };
+		F8E3DB4928664D0C00809F2F /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3DB4728664D0C00809F2F /* Car+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F86C5EB228285848000336A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F86C5EB528285848000336A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86C5EB728285848000336A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E3DB4628664D0C00809F2F /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8E3DB4728664D0C00809F2F /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		F86C5E9A28285847000336A7 = {
 			isa = PBXGroup;
 			children = (
+				F8E3DB4628664D0C00809F2F /* Car+CoreDataClass.swift */,
+				F8E3DB4728664D0C00809F2F /* Car+CoreDataProperties.swift */,
 				F86C5EA528285847000336A7 /* zad_11_1 */,
 				F86C5EA428285847000336A7 /* Products */,
 			);
@@ -152,6 +158,8 @@
 				F86C5EA728285847000336A7 /* AppDelegate.swift in Sources */,
 				F86C5EA928285847000336A7 /* SceneDelegate.swift in Sources */,
 				F86C5EAE28285847000336A7 /* ContentView.swift in Sources */,
+				F8E3DB4828664D0C00809F2F /* Car+CoreDataClass.swift in Sources */,
+				F8E3DB4928664D0C00809F2F /* Car+CoreDataProperties.swift in Sources */,
 				F86C5EAC28285847000336A7 /* zad_11_1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
